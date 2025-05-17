@@ -2,16 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.php",
+      "src": "api/index.php",
       "use": "@vercel/php"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "index.php",
+      "dest": "api/index.php",
+        "methods": ["GET", "POST", "PUT", "DELETE", "PATCH"],
       "status": 200
     }
   ]
 }
+
 
